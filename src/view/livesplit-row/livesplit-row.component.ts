@@ -6,12 +6,12 @@ export class LivesplitRowComponent extends HTMLElement {
     static tagname = 'moo-livesplit-row';
     static define(): void {
         customElements.define(LivesplitRowComponent.tagname, LivesplitRowComponent);
-    };
+    }
     static createElement(livesplitRow: LivesplitRow): LivesplitRowComponent {
         const element = document.createElement(LivesplitRowComponent.tagname) as LivesplitRowComponent;
         element.setLivesplitRow(livesplitRow);
         return element;
-    };
+    }
 
     readonly labelElement = document.createElement("div");
     readonly deltaFromStartAtElement = document.createElement("span");

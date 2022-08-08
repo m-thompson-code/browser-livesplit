@@ -146,8 +146,6 @@ export class LivesplitComponent extends HTMLElement {
     }
 
     setLabelsDisplay(state: LivesplitState): void {
-        let html = '';
-
         this.rowElementsWrapper.innerHTML = "";
         this.rows = [];
 
@@ -160,8 +158,6 @@ export class LivesplitComponent extends HTMLElement {
             this.rows.push(rowElement);
             this.rowElementsWrapper.appendChild(rowElement);
         }
-
-        console.log('setLabelsDisplay', html);
     }
 
     setMainDisplay(state: LivesplitState): void {

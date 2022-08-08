@@ -35,9 +35,9 @@ export class Livesplit {
     private readonly eventEmitter = new EventEmitter();
     private intervalRef?: number;
 
-    private currentAt: number = 0;
-    private startAt: number = 0;
-    private endAt: number = 0;
+    private currentAt = 0;
+    private startAt = 0;
+    private endAt = 0;
     
     private segments: Segments[] = [];
 
