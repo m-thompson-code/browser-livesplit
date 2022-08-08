@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid grey;
+}
+
+span {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

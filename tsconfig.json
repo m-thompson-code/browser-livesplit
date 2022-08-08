@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "sourceMap": true,
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "target": "es2017",
+      "module": "es2020",
+      "lib": [
+        "es2020",
+        "dom",
+        "dom.iterable"
+      ],
+      "esModuleInterop": true, /** Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+      "forceConsistentCasingInFileNames": true, /** Ensure that casing is correct in imports. */
+      "strict": true, /** Enable all strict type-checking options. */
+      "noImplicitReturns": true,
+      "noUnusedLocals": true,
+      "skipLibCheck": true, /** Skip type checking all .d.ts files. */
+      "outDir": "out-tsc",
+      "declaration": true, /** Generates index.d.ts types */
+      "allowSyntheticDefaultImports": true
+    },
+    "includes": ["src", "**/*.css", "**/*.html"],
+    "exclude": [
+      "out-tsc",
+      "**/*.spec.ts",
+      "**/*.test.ts",
+      "browser-livesplit-viewer/**/*"
+    ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "browser-live-split",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rollup.config.js",
+  "scripts": {
+    "prepare": "husky install",
+    "generate-certs": "openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css out-tsc/",
+    "rollup": "rollup -c rollup.config.js",
+    "build": "rimraf out-tsc && tsc && npm run copy-files && npm run rollup",
+    "prepublish": "npm run build",
+    "start": "npm run build && npm run serve",
+    "serve": "http-server -S",
+    "watch": "nodemon -e ts,js,css,html --watch src --exec \"npm run build\"",
+    "deploy": "npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@bitovi/eslint-config": "^1.3.0",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-html": "^0.2.4",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@types/jest": "^27.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "babel-jest": "^27.4.6",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.21.0",
+    "http-server": "^14.1.0",
+    "husky": "^8.0.1",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.66.1",
+    "rollup-plugin-import-css": "^3.0.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.1",
+    "events": "^3.3.0",
+    "firebase": "^9.6.5"
+  }
+}

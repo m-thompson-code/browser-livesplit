@@ -1,0 +1,104 @@
+:host {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2147483647;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1;
+    font-size: 14px;
+    width: 300px;
+    pointer-events: none;
+    background: rgba(0,0,0,0.9);
+    border: 1px solid grey;
+    color: white;
+    border-radius: 2px;
+}
+
+button {
+    pointer-events: auto; 
+
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+
+    text-align: inherit;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+
+    cursor: pointer;
+}
+/* Remove excess padding and border in Firefox 4+ */
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+button {
+    text-align: center;
+    border: 1px solid #90ee02;
+    padding: 5px 7px;
+    font-size: 16px;
+    border-radius: 2px;
+    color: #90ee02;
+    transition: all 100ms linear;
+    margin: -1px;
+}
+button:focus {
+    color: #90ee02;
+    border-color: #90ee02;
+    background: rgba(9, 175, 0, .05);
+}
+button:hover {
+    color: #c6f68d;
+    border-color: #c6f68d;
+    background: rgba(9, 175, 0, .2);
+}
+button:active {
+    color: #c6f68d;
+    border-color: #c6f68d;
+    background: rgba(9, 175, 0, .7);
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid grey;
+}
+.header button {
+    margin-left: 4px;
+}
+.square-button {
+    height: 31px;
+    width: 31px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.main-delta {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.hide {
+    display: none;
+}

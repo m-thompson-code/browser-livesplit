@@ -1,0 +1,7 @@
+coverage
+lib
+node_modules
+out-tsc
+.gitignore
+cert.pem
+key.pem
